@@ -15,6 +15,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+       
+ 
+        //firstNetworkCall()
+        //doNetworlCall()
+        //doAlamoFireCall()
+        //doBasicNetworkCall()
+        validateJSONSample()
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func firstNetworkCall() {
         //https://api.randomuser.me/
         
         let session   = URLSession.shared
@@ -43,17 +59,6 @@ class ViewController: UIViewController {
             
         }
         task.resume()
- 
- 
-        //doNetworlCall()
-        //doAlamoFireCall()
-        
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func doBasicNetworkCall(){
@@ -161,6 +166,31 @@ class ViewController: UIViewController {
                 case .failure(let error):
                     print(error)
                 }
+        }
+    }
+    
+    func validateJSONSample(){
+        let jsonDict = [
+            "name" : "Swift",
+            "developer" : "Apple Inc.",
+            "releaseDate" : [
+                "format":"longStyle",
+                "date": "June 2, 2014"
+            ],
+            "typing": ["static", "strong", "inferred"],
+            "OS": ["Mac OS", "Linux", "FreeBSD"],
+            "license": "Apache License 2.0",
+            "website": "swift.org"
+            ] as [String : Any]
+        
+        if JSONSerialization.isValidJSONObject(jsonDict) {
+            if let data = try? JSONSerialization.data(withJSONObject: jsonDict, options: []) {
+                
+                print("JSON data object is:\(data)")
+                print("JSON ORIGINAL:\(jsonDict)")
+
+                
+            }
         }
     }
 }
