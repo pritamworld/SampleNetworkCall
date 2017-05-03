@@ -20,8 +20,10 @@ class ViewController: UIViewController {
         //firstNetworkCall()
         //doNetworlCall()
         //doAlamoFireCall()
-        //doBasicNetworkCall()
-        validateJSONSample()
+        doBasicNetworkCall()
+        //validateJSONSample()
+        //backGroundCall()
+        print("Pritesh")
         
     }
 
@@ -192,6 +194,15 @@ class ViewController: UIViewController {
                 
             }
         }
+    }
+    
+    func backGroundCall() {
+        let url = URL(string: "http://www.google.com")
+        let request = URLRequest(url: url!)
+        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
+            print(NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
+        }
+
     }
 }
 
