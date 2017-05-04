@@ -15,12 +15,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-       
+        
+        let client = ClientAPI()
+       /*
+        client.login(email: "name@example.com", password: "password") { (success, message) -> () in
+            if success {
+                print("logged in successfully!")
+            } else {
+                print("there was an error:", message)
+            }
+ */
+            client.getData { (success, message) in
+                print(message)
+        }
  
         //firstNetworkCall()
         //doNetworlCall()
         //doAlamoFireCall()
-        doBasicNetworkCall()
+        //doBasicNetworkCall()
         //validateJSONSample()
         //backGroundCall()
         print("Pritesh")
