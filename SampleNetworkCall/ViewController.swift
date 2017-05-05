@@ -10,25 +10,25 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var imageview: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         
         let client = ClientAPI()
-       /*
-        client.login(email: "name@example.com", password: "password") { (success, message) -> () in
-            if success {
-                print("logged in successfully!")
-            } else {
-                print("there was an error:", message)
-            }
- */
-            client.getData { (success, message) in
-                print(message)
+        /*
+         client.login(email: "name@example.com", password: "password") { (success, message) -> () in
+         if success {
+         print("logged in successfully!")
+         } else {
+         print("there was an error:", message)
+         }
+         */
+        client.getData { (success, message) in
+            print(message)
         }
- 
+        
         //firstNetworkCall()
         //doNetworlCall()
         //doAlamoFireCall()
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         print("Pritesh")
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -93,9 +93,9 @@ class ViewController: UIViewController {
             }
         }
         task.resume()
-
+        
     }
-
+    
     func doNetworlCall()
     {
         let urlString = URL(string: "http://jsonplaceholder.typicode.com/users/1")
@@ -138,7 +138,7 @@ class ViewController: UIViewController {
                         print(company["name"])
                         print(company["catchPhrase"])
                         print(company["bs"])
-
+                        
                     }
                 }
             }
@@ -202,7 +202,7 @@ class ViewController: UIViewController {
                 
                 print("JSON data object is:\(data)")
                 print("JSON ORIGINAL:\(jsonDict)")
-
+                
                 
             }
         }
@@ -214,7 +214,7 @@ class ViewController: UIViewController {
         NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
             print(NSString(data: data!, encoding: String.Encoding.utf8.rawValue))
         }
-
+        
     }
 }
 
