@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28A25BA21F228ECF003CC226 /* WWDTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A25BA11F228ECF003CC226 /* WWDTableTableViewController.swift */; };
+		28A25BA61F22912F003CC226 /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A25BA41F22912F003CC226 /* Json4Swift_Base.swift */; };
+		28A25BA71F22912F003CC226 /* Parties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A25BA51F22912F003CC226 /* Parties.swift */; };
 		28AD49471EBBBB05007F8BAE /* ClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AD49461EBBBB05007F8BAE /* ClientAPI.swift */; };
 		28D696341EBCB94900E37C15 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D696331EBCB94900E37C15 /* StudentTableViewController.swift */; };
 		28D696361EBCBD5200E37C15 /* FruitsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D696351EBCBD5200E37C15 /* FruitsTableTableViewController.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28A25BA11F228ECF003CC226 /* WWDTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWDTableTableViewController.swift; sourceTree = "<group>"; };
+		28A25BA41F22912F003CC226 /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		28A25BA51F22912F003CC226 /* Parties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parties.swift; sourceTree = "<group>"; };
 		28AD49461EBBBB05007F8BAE /* ClientAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientAPI.swift; sourceTree = "<group>"; };
 		28D696331EBCB94900E37C15 /* StudentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 		28D696351EBCBD5200E37C15 /* FruitsTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitsTableTableViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28A25BA31F229123003CC226 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28A25BA41F22912F003CC226 /* Json4Swift_Base.swift */,
+				28A25BA51F22912F003CC226 /* Parties.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		28F883E31EB7B6AE00665F3E = {
 			isa = PBXGroup;
 			children = (
@@ -69,9 +84,11 @@
 		28F883EE1EB7B6AE00665F3E /* SampleNetworkCall */ = {
 			isa = PBXGroup;
 			children = (
+				28A25BA31F229123003CC226 /* Models */,
 				28F883EF1EB7B6AE00665F3E /* AppDelegate.swift */,
 				28F883F11EB7B6AE00665F3E /* ViewController.swift */,
 				28F883F31EB7B6AE00665F3E /* Main.storyboard */,
+				28A25BA11F228ECF003CC226 /* WWDTableTableViewController.swift */,
 				28F883F61EB7B6AE00665F3E /* Assets.xcassets */,
 				28F883F81EB7B6AE00665F3E /* LaunchScreen.storyboard */,
 				28F883FB1EB7B6AE00665F3E /* Info.plist */,
@@ -226,7 +243,10 @@
 				28F883F21EB7B6AE00665F3E /* ViewController.swift in Sources */,
 				28DFF2CB1EBA6156000E16DC /* SmsViewController.swift in Sources */,
 				28F883F01EB7B6AE00665F3E /* AppDelegate.swift in Sources */,
+				28A25BA21F228ECF003CC226 /* WWDTableTableViewController.swift in Sources */,
 				28D696341EBCB94900E37C15 /* StudentTableViewController.swift in Sources */,
+				28A25BA71F22912F003CC226 /* Parties.swift in Sources */,
+				28A25BA61F22912F003CC226 /* Json4Swift_Base.swift in Sources */,
 				28AD49471EBBBB05007F8BAE /* ClientAPI.swift in Sources */,
 				28D696361EBCBD5200E37C15 /* FruitsTableTableViewController.swift in Sources */,
 			);
